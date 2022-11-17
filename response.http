@@ -1,0 +1,63 @@
+
+
+//login user
+POST http://localhost:3001/login/
+Content-Type: application/json
+
+{
+    "username" : "tejapamuru",
+    "password" : "tejapamuru4111"
+}
+
+
+###
+
+
+// registering user
+POST http://localhost:3001/register/
+Content-Type: application/json
+
+{
+    "id" : 1,
+    "firstname" : "Teja",
+    "lastname" : "Pamuru",
+    "username" : "tejapamuru",
+    "password" : "tejapamuru4111",
+    "gender" : "Male"
+}
+
+
+
+###
+
+// posting question with answer
+POST http://localhost:3001/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlamFwYW11cnUiLCJpYXQiOjE2Njg2NTQ2MDl9.1aEUuZf5ANfxHrAlVVxXP8755fwYQA278DutgkK9RMo
+Content-Type: application/json
+
+{
+    "f_id" : "3",
+    "que" : "About React ?",
+    "ans" : "React is popular framework for ui development."
+}
+
+###
+
+
+
+// posting answer for existing question
+POST http://localhost:3001/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlamFwYW11cnUiLCJpYXQiOjE2Njg2NTQ2MDl9.1aEUuZf5ANfxHrAlVVxXP8755fwYQA278DutgkK9RMo
+Content-Type: application/json
+
+{
+    "f_id" : "3",
+    "ans" : "React is javascript."
+}
+
+###
+
+
+// getting list of question and answers
+GET http://localhost:3001/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlamFwYW11cnUiLCJpYXQiOjE2Njg2NTQ2MDl9.1aEUuZf5ANfxHrAlVVxXP8755fwYQA278DutgkK9RMo
